@@ -15,7 +15,7 @@ const Header = () => {
       </div>
 
       <div>
-        <Button className='bg-black'>Get started</Button>
+        <Button className='bg-[#ed1e61]'>Get started</Button>
       </div>
     </div>
   );
