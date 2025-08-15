@@ -1,7 +1,11 @@
+'use client';
 import { Button } from '@/components/ui/button';
 import Lookup from '../data/Lookup';
+import { useState } from 'react';
+import Link from 'next/link';
 
 function Hero() {
+  const [logoTitle, setLogoTitle] = useState('');
   return (
     <div className='flex items-center mt-24 flex-col gap-5'>
       <h2 className='text-[#ed1e61] text-5xl text-center font-bold'>
@@ -17,8 +21,13 @@ function Hero() {
           type='text'
           placeholder={Lookup.InputTitlePlaceholder}
           className='p-3 border rounded-md w-full shadow-md'
+          onChange={(event) => setLogoTitle(event.target.value)}
+          value={logoTitle}
         />
-        <Button className='bg-[#ed1e61] p-6 '>Get started</Button>
+
+        <Link href={'/create?title=' + logoTitle}>
+          <Button className='bg-[#ed1e61] p-6 '>Get started</Button>
+        </Link>
       </div>
     </div>
   );
