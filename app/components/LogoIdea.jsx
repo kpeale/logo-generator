@@ -53,7 +53,9 @@ function LogoIdea({ formData, onHandleInputChange }) {
                 onHandleInputChange(item);
               }}
               className={`p-2 rounded-full border px-3 cursor-pointer
-          hover:border-primary ${selectedOption == item && 'border-primary'}`}
+          hover:border-[#ed1e61] ${
+            selectedOption == item && 'border-[#ed1e61]'
+          }`}
             >
               {item}
             </h2>
@@ -64,8 +66,9 @@ function LogoIdea({ formData, onHandleInputChange }) {
             onHandleInputChange('Let AI Select the best idea');
           }}
           className={`p-2 rounded-full border px-3 cursor-pointer
-          hover:border-primary ${
-            selectedOption == 'Let AI Select the best idea' && 'border-primary'
+          hover:border-[#ed1e61] ${
+            selectedOption == 'Let AI Select the best idea' &&
+            'border-[#ed1e61]'
           }`}
         >
           Let AI Select the best idea

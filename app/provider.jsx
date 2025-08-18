@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 
 function Provider({ children }) {
+  const CheckUserAuth = () => {};
   return (
     <div>
       <Header />
